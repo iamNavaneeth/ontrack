@@ -1,0 +1,85 @@
+// Work
+
+.work-block {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  @include breakpoint(m) {
+    padding-top: 60px;
+  }
+}
+
+.work-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.work-item {
+  position: relative;
+  display: block;
+  min-height: 200px;
+  color: $black;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 40px;
+  @include breakpoint(m) {
+    margin-bottom: 0;
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include background-alpha($dark-grey, 0%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .2s;
+    z-index: 1;
+  }
+  img {
+    width: 100%;
+    @include breakpoint(m) {
+      width: auto;
+      height: 300px;
+    }
+    display: block;
+    transition: all .3s;
+  }
+  .work-item-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    z-index: 5;
+    padding: 20px;
+  }
+  &:hover {
+    .work-item-inner { opacity: 1; }
+    &:after {
+      @include background-alpha($darkest-grey, 60%);
+    }
+    img {
+      transform: scale(1.1);
+      opacity: .9;
+    }
+  }
+}
+.work-heading-small {
+  font-family: $base-heading-font-family;
+  @include font-size(10);
+  @include line-height(16);
+  color: $light-grey;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: block;
+}
+.work-heading-big {
+  font-family: $base-heading-font-family;
+  @include font-size(14);
+  @include line-height(20);
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: block;
+}

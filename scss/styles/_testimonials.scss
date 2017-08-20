@@ -1,0 +1,103 @@
+// Testimonials
+
+.testimonial-block {
+  background: $light-yellow;
+  background: $blue;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include breakpoint(m) {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+  .small-heading-secondary, .big-heading-secondary {
+    color: $white;
+  }
+  .heading::after {
+    background: $white;
+  }
+}
+
+.testimonial-list {
+  list-style: none;
+  padding: 0 0 40px 0;
+  margin: 0;
+  position: relative;
+}
+.testimonial-item {
+  margin: 0;
+  display: block;
+  color: $white;
+  min-height: 260px;
+  @include breakpoint(m) {
+    min-height: 200px;
+  }
+  @include breakpoint(l) {
+    min-height: 180px;
+  }
+  cite {
+    display: inline-block;
+    @include font-size(14);
+    @include line-height(18);
+  }
+  p {
+    color: $white;
+    @include font-size(16);
+    @include line-height(26);
+    font-weight: 100;
+    margin-bottom: 40px;
+  }
+}
+.testimonial-avatar {
+  float: left;
+  margin-right: 12px;
+  img {
+    border-radius: 100%;
+    border: 3px solid $light-blue;
+    display: block;
+  }
+}
+.testimonial-author {
+  display: block;
+  float: left;
+  padding-top: 6px;
+}
+.testimonial-status {
+  @include font-size(12);
+  @include line-height(16);
+  font-weight: 200;
+}
+
+// Testimonial Tabs
+.testimonial-tab {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -6px;
+  border: 1px solid $green;
+  cursor: pointer;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    border-radius: 100%;
+    margin-top: -40%;
+    margin-left: -40%;
+  }
+}
+.testimonial-checkbox { display: none; }
+.testimonial-checkbox:checked + label:before { background: $green; }
+.testimonial-checkbox + label + .testimonial-item { display: none; }
+.testimonial-checkbox:checked + label + .testimonial-item { display: block; }
+
+.testimonial-tab-1 { transform: translateX(-30px); }
+.testimonial-tab-2 { transform: translateX(0); }
+.testimonial-tab-3 { transform: translateX(30px); }

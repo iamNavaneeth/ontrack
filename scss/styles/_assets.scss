@@ -1,0 +1,70 @@
+// Assets
+.grey { color: $grey; }
+.white { color: $white; }
+.yellow { color: $yellow; }
+.blue { color: $blue; }
+
+
+.lead {
+  @extend .fs-4;
+  font-weight: 300;
+  color: $grey;
+}
+
+.small-heading {
+  @extend .fs-6;
+  display: block;
+  font-weight: 100;
+  padding: 5px 0;
+  text-transform: capitalize;
+  color: $grey;
+}
+.small-heading-secondary { color: $dark-grey; }
+.big-heading {
+  @extend .fs-2;
+  display: block;
+}
+.big-heading-secondary { color: $black; }
+
+.button {
+  font-family: $base-heading-font-family;
+  @include font-size(13);
+  @include line-height(18);
+  padding: 16px 20px;
+  font-weight: 600;
+  border-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 200px;
+}
+.button-primary {
+  background: $green;
+  color: $white;
+}
+.button-secondary {
+  background: $white;
+  color: $dark-grey;
+  &:hover { background: $lightest-grey; }
+}
+.button-outline {
+  background: transparent;
+  border: 3px solid $grey;
+  color: $grey;
+  &:hover {
+    background: transparent;
+    color: $dark-grey;
+    border-color: $dark-grey;
+  }
+}
+.heading {
+  display: block;
+  color: $dark-grey;
+  &:after {
+    content: "";
+    width: 14px;
+    height: 2px;
+    display: block;
+    background: $dark-grey;
+    margin-top: 10px;
+  }
+}

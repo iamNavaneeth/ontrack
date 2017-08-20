@@ -1,0 +1,11 @@
+// About
+
+.about-block {
+  position: relative;
+  z-index: 300;
+  margin-top: -50px;
+  padding-bottom: 20px;
+  @include breakpoint(l) {
+    padding-bottom: 40px;
+  }
+}

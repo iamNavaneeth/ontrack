@@ -1,0 +1,25 @@
+// ==========================================================================
+// OnTrack Consolidated StyleSheet
+// ==========================================================================
+
+// Global Variables
+@import "styles/variables-colors";
+
+// Import Base
+@import "node_modules/getbase/src/scss/base";
+
+// Styles
+@import "styles/assets";
+@import "styles/header";
+@import "styles/banner";
+@import "styles/about";
+@import "styles/services";
+@import "styles/work";
+@import "styles/testimonials";
+@import "styles/contact";
+@import "styles/footer";
+
+@import "styles/dashboard";
+
+// Import Base Helpers
+@import "node_modules/getbase/src/scss/base/helpers";
